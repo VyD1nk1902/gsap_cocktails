@@ -9,6 +9,7 @@ const Navbar = () => {
       scrollTrigger: {
         trigger: "nav",
         start: "bottom top",
+        scrub: true,
       },
     });
     navTween.fromTo("nav", {backgroundColor: "transparent"},
