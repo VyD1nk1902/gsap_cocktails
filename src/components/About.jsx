@@ -2,6 +2,7 @@ import React from 'react';
 import {useGSAP} from "@gsap/react";
 import {SplitText} from "gsap/all";
 import gsap from "gsap";
+import {Star, StarHalf} from "@phosphor-icons/react";
 
 const About = () => {
 
@@ -28,6 +29,15 @@ const About = () => {
         .from(subDescSplit.lines, {
           opacity: 0, duration: 1, yPercent: 100, ease: "expo.out", stagger: 0.02,
         }, "-=0.5")
+        .from("#star > *", {
+          opacity: 0, xPercent: 200, duration: 0.5, ease: "expo.out", stagger: 0.1,
+        }, "-=0.5")
+        .from("#score", {
+          opacity: 0, xPercent: 200, duration: 0.5, ease: "expo.out",
+        }, "-=0.5")
+        .from("#customer-profile", {
+          opacity: 0, duration: 0.5, xPercent: 200, ease: "expo.out", stagger: 0.1,
+        }, "-=0.5")
         .from(".top-grid div, .bottom-grid div", {
           opacity: 0, duration: 1, ease: "power1.out", stagger: 0.04,
         }, "-=0.5");
@@ -47,11 +57,28 @@ const About = () => {
               <p className="sub-desc">Every cocktail we serve is a reflection of our obsession with detail — from the
                 first muddle to the
                 final garnish. That care is what turns a simple drink into something truly memorable. </p>
-              <div>
-                <p className="md:text-3xl text-xl font-bold">
-                  <span>4.5</span>/5
-                </p>
-                <p className="text-sm text-white-100">More than +12000 customers</p>
+              <div className="flex flex-row items-center">
+                <div>
+                <span className="flex gap-1" id="star">
+                  <Star size={16} color="#fafafa" weight="fill"/>
+                  <Star size={16} color="#fafafa" weight="fill"/>
+                  <Star size={16} color="#fafafa" weight="fill"/>
+                  <Star size={16} color="#fafafa" weight="fill"/>
+                  <StarHalf size={16} color="#fafafa" weight="fill"/>
+                </span>
+                  <p id="score" className="md:text-3xl text-xl font-bold">
+                    <span>4.5</span>/5
+                  </p>
+                  <p className="text-sm text-white-100">More than +12000 customers</p>
+                </div>
+                <div className="w-1 h-[85px] rounded-[16px] bg-[linear-gradient(180deg,#313131_0%,#0F0F0F_100%)]"/>
+                <div id="customer-profile"
+                     className="px-6 py-5 -space-x-4 flex-row bg-[linear-gradient(180deg,#313131_0%,#0F0F0F_100%)] rounded-[60px]">
+                  <img src="/images/profile1.png" alt="profile" className="w-8 h-8 md:w-10 md:h-10"/>
+                  <img src="/images/profile2.png" alt="profile" className="w-8 h-8 md:w-10 md:h-10"/>
+                  <img src="/images/profile3.png" alt="profile" className="w-8 h-8 md:w-10 md:h-10"/>
+                  <img src="/images/profile4.png" alt="profile" className="w-8 h-8 md:w-10 md:h-10"/>
+                </div>
               </div>
             </div>
           </div>
