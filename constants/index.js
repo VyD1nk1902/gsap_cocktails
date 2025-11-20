@@ -50,7 +50,7 @@ const mockTailLists = [
     price: "$10",
   },
   {
-    name: "Passionfruit Mint",
+    name: "Passion fruit Mint",
     country: "US",
     detail: "Battle",
     price: "$49",
