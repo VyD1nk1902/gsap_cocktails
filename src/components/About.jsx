@@ -34,13 +34,13 @@ const About = () => {
         }, "-=0.5")
         .from("#score", {
           opacity: 0, xPercent: 200, duration: 0.5, ease: "expo.out",
-        }, "-=0.5")
+        }, "-=1")
         .from("#customer-profile", {
           opacity: 0, duration: 0.5, xPercent: 200, ease: "expo.out", stagger: 0.1,
-        }, "-=0.5")
+        }, "-=1")
         .from(".top-grid div, .bottom-grid div", {
-          opacity: 0, duration: 1, ease: "power1.out", stagger: 0.04,
-        }, "-=0.5");
+          opacity: 0, duration: 1, ease: "power2.out", stagger: 0.04,
+        }, "-=1");
   }, []);
 
   return (
